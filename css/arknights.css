@@ -442,6 +442,20 @@ aside footer {
   margin: unset;
   text-align: center;
 }
+#busuanzi_value_site_pv {
+  color: #2bf;
+}
+#busuanzi_container_site_pv {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+#busuanzi {
+  display: flex;
+  justify: center;
+  align-items: center;
+  margin-top: 20px;
+}
 html,
 body,
 label {
