@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>div画图 | 花弦的个人博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="this is a blog build by vuepress">
+    
+    <link rel="preload" href="/assets/css/0.styles.caaa98ba.css" as="style"><link rel="preload" href="/assets/js/app.20d6ccea.js" as="script"><link rel="preload" href="/assets/js/4.bfe2a335.js" as="script"><link rel="preload" href="/assets/js/1.ed280157.js" as="script"><link rel="preload" href="/assets/js/19.d608f723.js" as="script"><link rel="prefetch" href="/assets/js/10.e6b0c68f.js"><link rel="prefetch" href="/assets/js/11.0ce6fe5d.js"><link rel="prefetch" href="/assets/js/12.f58e3c07.js"><link rel="prefetch" href="/assets/js/13.74e72659.js"><link rel="prefetch" href="/assets/js/14.11168a1c.js"><link rel="prefetch" href="/assets/js/15.399c5850.js"><link rel="prefetch" href="/assets/js/16.5e349d53.js"><link rel="prefetch" href="/assets/js/17.0dabf03f.js"><link rel="prefetch" href="/assets/js/18.df754256.js"><link rel="prefetch" href="/assets/js/20.6684182d.js"><link rel="prefetch" href="/assets/js/21.91789713.js"><link rel="prefetch" href="/assets/js/22.5e21a917.js"><link rel="prefetch" href="/assets/js/23.6a2a48e9.js"><link rel="prefetch" href="/assets/js/24.25f8063c.js"><link rel="prefetch" href="/assets/js/25.75398357.js"><link rel="prefetch" href="/assets/js/26.c452e909.js"><link rel="prefetch" href="/assets/js/27.f7699843.js"><link rel="prefetch" href="/assets/js/28.73cf7efe.js"><link rel="prefetch" href="/assets/js/29.81fe5872.js"><link rel="prefetch" href="/assets/js/3.37042c3f.js"><link rel="prefetch" href="/assets/js/30.f4acb5d9.js"><link rel="prefetch" href="/assets/js/31.879291a0.js"><link rel="prefetch" href="/assets/js/32.db66414b.js"><link rel="prefetch" href="/assets/js/33.2295dd41.js"><link rel="prefetch" href="/assets/js/34.a8ff014f.js"><link rel="prefetch" href="/assets/js/35.a1483f2f.js"><link rel="prefetch" href="/assets/js/36.3b00bcb7.js"><link rel="prefetch" href="/assets/js/37.76247adf.js"><link rel="prefetch" href="/assets/js/38.0b081cbe.js"><link rel="prefetch" href="/assets/js/39.eaf26307.js"><link rel="prefetch" href="/assets/js/40.12314f3b.js"><link rel="prefetch" href="/assets/js/41.a4205258.js"><link rel="prefetch" href="/assets/js/42.6d658379.js"><link rel="prefetch" href="/assets/js/43.6601f71e.js"><link rel="prefetch" href="/assets/js/44.ec407e22.js"><link rel="prefetch" href="/assets/js/45.44113df8.js"><link rel="prefetch" href="/assets/js/46.0a1d64b8.js"><link rel="prefetch" href="/assets/js/5.de240759.js"><link rel="prefetch" href="/assets/js/6.f6628e12.js"><link rel="prefetch" href="/assets/js/7.5746b4a3.js"><link rel="prefetch" href="/assets/js/8.7b973e79.js"><link rel="prefetch" href="/assets/js/9.b47b4a6f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.caaa98ba.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="global-layout" data-v-937f91ec><canvas id="stage" data-v-613daa13 data-v-937f91ec></canvas> <div class="loading" data-v-937f91ec><div class="text">正在加载中</div></div> <div class="hide" data-v-937f91ec><div id="top" data-v-937f91ec></div> <div class="layout" data-v-05fb5372 data-v-937f91ec><div class="search-box" data-v-3fd2ef93 data-v-05fb5372><input autofocus="autofocus" placeholder="找找关键词哦～" value="" data-v-3fd2ef93> <div class="result-list hide" data-v-3fd2ef93></div></div> <div class="article" data-v-e061f21e data-v-05fb5372><div class="content__default" data-v-e061f21e><h1 id="山"><a href="#山" class="header-anchor">#</a> 山</h1> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #fff1c1<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">div::before</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #fe5f55<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">div::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 180px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token comment">/* aspect-ratio可以设定元素的宽高比，如果宽度变化，高度将会自动变化 */</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fe5f55<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> -100px 240px<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="铅笔"><a href="#铅笔" class="header-anchor">#</a> 铅笔</h1> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 240px<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> 
+        <span class="token function">linear-gradient</span><span class="token punctuation">(</span>#e53466 70%<span class="token punctuation">,</span>
+        #d8d8d8 70%<span class="token punctuation">)</span> no-repeat<span class="token punctuation">,</span>
+        <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span>
+        #f06a35 33.3%<span class="token punctuation">,</span>
+        #f68c30 33.3%<span class="token punctuation">,</span>
+        #f68c30 66.6%<span class="token punctuation">,</span>
+        #ffa927 66.6%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 30%<span class="token punctuation">,</span> 100% 70%<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 30px 30px 0 0<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">div::before</span> <span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token comment">/* 径向渐变，以20，20为圆心 */</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at 20px 20px<span class="token punctuation">,</span> #f4c09b 20px<span class="token punctuation">,</span> transparent 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">background-size</span><span class="token punctuation">:</span> 40px 20px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">div::after</span> <span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 110px<span class="token punctuation">;</span>
+      <span class="token comment">/* 线性渐变，第二个参数为渐变范围 */</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>#f4c09b 70%<span class="token punctuation">,</span> #5e381f 70%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">bottom</span><span class="token punctuation">:</span> -110px<span class="token punctuation">;</span>
+      <span class="token comment">/* 裁剪属性，类似于蒙版 */</span>
+      <span class="token comment">/* polygon()函数创建一个三角形的裁剪，指定三个顶点来绘制三角形
+         还有其他的形状函数例如circle()、ellipse()、inset() */</span>
+      <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span>0 0<span class="token punctuation">,</span> 100% 0<span class="token punctuation">,</span> 50% 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h1 id="云"><a href="#云" class="header-anchor">#</a> 云</h1> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+      <span class="token comment">/* currentColor 指代当前的文本颜色 */</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+      <span class="token comment">/* 设置几组不同的阴影 */</span>
+      <span class="token comment">/* box-shadow属性可以设置盒子的阴影，每个阴影都由一组参数来定义，包括阴影位置、模糊半径、扩张半径和颜色。 */</span>
+      <span class="token property">box-shadow</span><span class="token punctuation">:</span> 50px 0<span class="token punctuation">,</span> 100px 0<span class="token punctuation">,</span> 150px 0<span class="token punctuation">,</span> 50px -40px<span class="token punctuation">,</span> 110px -30px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <!----> <!----></div> <div class="page-catalog" data-v-b36df3b8 data-v-05fb5372><div class="menu" data-v-b36df3b8><div class="menu-item cur" data-v-b36df3b8>目录</div> <div class="menu-item" data-v-b36df3b8>首页</div> <div class="menu-item" data-v-b36df3b8><a href="#top" data-v-b36df3b8> 顶部</a></div></div> <div class="catalog" data-v-b36df3b8><!----> <h1 class="curtitle" data-v-b36df3b8></h1>  <!----></div></div> <div id="gitalk-container" data-v-09701175 data-v-05fb5372></div></div> <div id="landlord" class="live2d-box" data-v-46533029 data-v-937f91ec><div id="live2deMessage" class="message show" data-v-46533029>喵喵喵～</div> <!----></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.20d6ccea.js" defer></script><script src="/assets/js/4.bfe2a335.js" defer></script><script src="/assets/js/1.ed280157.js" defer></script><script src="/assets/js/19.d608f723.js" defer></script>
+  </body>
+</html>

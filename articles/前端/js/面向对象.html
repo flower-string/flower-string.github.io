@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向对象 | 花弦的个人博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="this is a blog build by vuepress">
+    
+    <link rel="preload" href="/assets/css/0.styles.caaa98ba.css" as="style"><link rel="preload" href="/assets/js/app.20d6ccea.js" as="script"><link rel="preload" href="/assets/js/4.bfe2a335.js" as="script"><link rel="preload" href="/assets/js/1.ed280157.js" as="script"><link rel="preload" href="/assets/js/29.81fe5872.js" as="script"><link rel="prefetch" href="/assets/js/10.e6b0c68f.js"><link rel="prefetch" href="/assets/js/11.0ce6fe5d.js"><link rel="prefetch" href="/assets/js/12.f58e3c07.js"><link rel="prefetch" href="/assets/js/13.74e72659.js"><link rel="prefetch" href="/assets/js/14.11168a1c.js"><link rel="prefetch" href="/assets/js/15.399c5850.js"><link rel="prefetch" href="/assets/js/16.5e349d53.js"><link rel="prefetch" href="/assets/js/17.0dabf03f.js"><link rel="prefetch" href="/assets/js/18.df754256.js"><link rel="prefetch" href="/assets/js/19.d608f723.js"><link rel="prefetch" href="/assets/js/20.6684182d.js"><link rel="prefetch" href="/assets/js/21.91789713.js"><link rel="prefetch" href="/assets/js/22.5e21a917.js"><link rel="prefetch" href="/assets/js/23.6a2a48e9.js"><link rel="prefetch" href="/assets/js/24.25f8063c.js"><link rel="prefetch" href="/assets/js/25.75398357.js"><link rel="prefetch" href="/assets/js/26.c452e909.js"><link rel="prefetch" href="/assets/js/27.f7699843.js"><link rel="prefetch" href="/assets/js/28.73cf7efe.js"><link rel="prefetch" href="/assets/js/3.37042c3f.js"><link rel="prefetch" href="/assets/js/30.f4acb5d9.js"><link rel="prefetch" href="/assets/js/31.879291a0.js"><link rel="prefetch" href="/assets/js/32.db66414b.js"><link rel="prefetch" href="/assets/js/33.2295dd41.js"><link rel="prefetch" href="/assets/js/34.a8ff014f.js"><link rel="prefetch" href="/assets/js/35.a1483f2f.js"><link rel="prefetch" href="/assets/js/36.3b00bcb7.js"><link rel="prefetch" href="/assets/js/37.76247adf.js"><link rel="prefetch" href="/assets/js/38.0b081cbe.js"><link rel="prefetch" href="/assets/js/39.eaf26307.js"><link rel="prefetch" href="/assets/js/40.12314f3b.js"><link rel="prefetch" href="/assets/js/41.a4205258.js"><link rel="prefetch" href="/assets/js/42.6d658379.js"><link rel="prefetch" href="/assets/js/43.6601f71e.js"><link rel="prefetch" href="/assets/js/44.ec407e22.js"><link rel="prefetch" href="/assets/js/45.44113df8.js"><link rel="prefetch" href="/assets/js/46.0a1d64b8.js"><link rel="prefetch" href="/assets/js/5.de240759.js"><link rel="prefetch" href="/assets/js/6.f6628e12.js"><link rel="prefetch" href="/assets/js/7.5746b4a3.js"><link rel="prefetch" href="/assets/js/8.7b973e79.js"><link rel="prefetch" href="/assets/js/9.b47b4a6f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.caaa98ba.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="global-layout" data-v-937f91ec><canvas id="stage" data-v-613daa13 data-v-937f91ec></canvas> <div class="loading" data-v-937f91ec><div class="text">正在加载中</div></div> <div class="hide" data-v-937f91ec><div id="top" data-v-937f91ec></div> <div class="layout" data-v-05fb5372 data-v-937f91ec><div class="search-box" data-v-3fd2ef93 data-v-05fb5372><input autofocus="autofocus" placeholder="找找关键词哦～" value="" data-v-3fd2ef93> <div class="result-list hide" data-v-3fd2ef93></div></div> <div class="article" data-v-e061f21e data-v-05fb5372><div class="content__default" data-v-e061f21e><h1 id="面向对象"><a href="#面向对象" class="header-anchor">#</a> 面向对象</h1> <h2 id="理解对象"><a href="#理解对象" class="header-anchor">#</a> 理解对象</h2> <p>对象是Object的实例，js中万物皆对象，都拥有<strong>属性</strong>和<strong>方法</strong>。</p> <p>比如下面的两个对象通过不同的方式创建，但他们是等价的</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 实例化对象</span>
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;neko&quot;</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span>job <span class="token operator">=</span> <span class="token string">&quot;anchor&quot;</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span><span class="token function-variable function">sayName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 字面量对象</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">&quot;neko&quot;</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">job</span> <span class="token operator">:</span> <span class="token string">&quot;anchor&quot;</span><span class="token punctuation">;</span>
+    <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="属性的类型"><a href="#属性的类型" class="header-anchor">#</a> 属性的类型</h3> <h4 id="数据属性"><a href="#数据属性" class="header-anchor">#</a> 数据属性</h4> <p>数据属性包含一个保存数据值的地方，值会在这里读取和写入，拥有下面的4个特性。</p> <ul><li>Configurable： 属性是否可以被删除和重新定义，是否可以修改其他特性，默认值为true。</li> <li>Enumerable：属性是否可以通过for-in循环，默认值为true。</li> <li>Writable：属性是否可以被修改，默认值为true。</li> <li>value：属性的值。</li></ul> <p>特性是被封装起来的，要修改数据的特性，需要调用**Object.defineProperty()**方法，这个方法接受3个参数</p> <ul><li>第一个参数是要修改的对象。</li> <li>第二个参数是属性的名称。</li> <li>第三个参数是特性组成的对象。</li></ul> <p>当Configurable被修改为false时，这个对象就会被锁死，不能再调用**Object.defineProperty()**方法。</p> <h4 id="访问器属性"><a href="#访问器属性" class="header-anchor">#</a> 访问器属性</h4> <p>访问器属性不包含属性值，他可以用来设置和获取对象的数据属性。</p> <p>他拥有四个特性</p> <ul><li>Configurable：表示是否可以被删除和修改，是否可以修改特性，是否可以可以转化为数据属性，默认值为true。</li> <li>Enumereable：表示属性是否可以被遍历，默认值为true。</li> <li>Get：获取函数，用于读取属性值，默认值为undefined。</li> <li>Set：设置函数，用于写入属性值，默认值为undefined。</li></ul> <p>访问器属性不能直接定义，只能通过**Object.defineProperty()**方法定义。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> book <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">year_</span> <span class="token operator">:</span> <span class="token number">2017</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">edition</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>book <span class="token punctuation">,</span> <span class="token string">'year'</span> <span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> year_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token keyword">this</span><span class="token punctuation">.</span>year <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">=</span> val <span class="token operator">-</span> <span class="token keyword">this</span><span class="token punctuation">.</span>edition<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+book<span class="token punctuation">.</span>year <span class="token operator">=</span> <span class="token number">2018</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>book<span class="token punctuation">.</span>edition<span class="token punctuation">)</span>
+</code></pre></div><p>其中get函数用于获取值，只是简单得让year的值和year_在数值上相同。</p> <p>set函数用于设置值，当year的值变化时，会将新的值作为参数传入set函数，然后调用。（我怀疑vue就是用这东西搞的）</p> <p>set和get都是可选的，只定义get意味着属性是只读的，不能修改，只有set函数则不能进行值的读取，必须做赋值操作。</p> <h3 id="静态方法"><a href="#静态方法" class="header-anchor">#</a> 静态方法</h3> <h4 id="定义多个属性"><a href="#定义多个属性" class="header-anchor">#</a> 定义多个属性</h4> <p>**Object.defineProperty()**可以同时为对象定义多个属性，包括数据属性和访问器属性，语法如下。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> girl <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>girl <span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">vallue</span> <span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">othername</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            retuen <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这样与单独定义的区别是：属性特性的默认值都会变为false。（configurable、enumerable、writable）</p> <h4 id="特性读取"><a href="#特性读取" class="header-anchor">#</a> 特性读取</h4> <p>使用**Object.getPropertyDescriptor()**可以获取到指定属性的修饰符。</p> <p>这个函数接受两个参数，第一个参数是属性所在的对象，第二个参数是属性名。</p> <p>返回值是一个由属性特性组成的对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> book <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>book <span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">year_</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token number">2022</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">edition</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>year_<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> ds <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPropertyDescriptor</span><span class="token punctuation">(</span>book <span class="token punctuation">,</span> <span class="token string">&quot;year_&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//{</span>
+<span class="token comment">//    value : 2022,</span>
+<span class="token comment">//    configurable : false,</span>
+<span class="token comment">//    enumerable : false,</span>
+<span class="token comment">//    writable : false,</span>
+<span class="token comment">//}</span>
+</code></pre></div><p>ES6在2017年新增加了**Object.getPropertyDescriptors()**方法，这个函数接受一个目标对象，返回一个属性对象，属性对象内有各个属性的特性值组成的对象。</p> <p>这个方法的本质是对**Object.getPropertyDescriptor()<strong>的再封装，就是对象的每个属性使用</strong>Object.getPropertyDescriptor()**方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> book <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>book <span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">year_</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token number">2022</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">edition</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>year_<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> ds <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPropertyDescriptors</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//{</span>
+<span class="token comment">//    year_ : {...},</span>
+<span class="token comment">//    edition : {...},</span>
+<span class="token comment">//    year : {...},</span>
+<span class="token comment">//}</span>
+</code></pre></div><h4 id="对象合并"><a href="#对象合并" class="header-anchor">#</a> 对象合并</h4> <p>将源对象的属性和方法复制到目标对象上称为对象合并，也叫做混入（mixin）；</p> <p>可以使用**Object.assign()**方法。</p> <p>这个方法第一个参数为要接受合并的目标对象，之后跟上若干个源对象，然后将源对象中的可枚举属性和自有属性拷贝到目标对象。</p> <p>这个方法只能实现浅拷贝，也就是拷贝地址，拷贝后的属性只是之前的引用。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> dest <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> src <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>dest <span class="token punctuation">,</span> src<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dest<span class="token punctuation">.</span>a <span class="token operator">===</span> src<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><p>合并后的源对象属性会覆盖掉目标对象的同名属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">id</span> <span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">,</span> <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">id</span> <span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">,</span> <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>a <span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">//{id : 2 , name : 'neko' , age : 16}</span>
+</code></pre></div><p>如果在拷贝期间出错，会立刻停止执行，不会回滚到执行之前。</p> <h4 id="对象相等"><a href="#对象相等" class="header-anchor">#</a> 对象相等</h4> <p>新增加了<strong>Object.is</strong>方法，可以检测两个对象的内容是否相等。</p> <p>这个方法接收两个被比较的对象，返回一个布尔值。</p> <p>由于这个函数比较的是内容，所以可以弥补===的不足。</p> <p>例如NaN和NaN的比较，对象的比较。</p> <p>如果有多个要检查的对象，可以自定义函数利用递归比较即可</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">reis</span><span class="token punctuation">(</span><span class="token parameter">x <span class="token punctuation">,</span> <span class="token operator">...</span>y</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>x <span class="token punctuation">,</span> y<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+        <span class="token punctuation">(</span>y<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token function">reis</span><span class="token punctuation">(</span><span class="token operator">...</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="对象的增强写法"><a href="#对象的增强写法" class="header-anchor">#</a> 对象的增强写法</h3> <h4 id="属性值简写"><a href="#属性值简写" class="header-anchor">#</a> 属性值简写</h4> <p>有的时候属性值(变量名)和属性名是一样的，这时候就可以简写。</p> <p>下面的两种写法是一样的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">&quot;neko&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 之前的写法</span>
+<span class="token keyword">const</span> a1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> name<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 增强写法</span>
+<span class="token keyword">const</span> a2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="可计算属性"><a href="#可计算属性" class="header-anchor">#</a> 可计算属性</h4> <p>可计算属性简化了动态属性名的定义。</p> <p>下面的两种写法是一样的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 之前的写法</span>
+<span class="token keyword">let</span> o <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token string">&quot;age&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    o<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+    o<span class="token punctuation">[</span>age<span class="token punctuation">]</span> ： <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 增强写法</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token string">&quot;age&quot;</span><span class="token punctuation">,</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>  <span class="token comment">// 将属性名用中括号包裹起来，可以将其作为js表达式来求解。</span>
+    <span class="token punctuation">[</span>age<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="简化方法名"><a href="#简化方法名" class="header-anchor">#</a> 简化方法名</h4> <p>在对象内定义函数时也有增强写法。如下所示。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 过去的写法</span>
+    <span class="token function-variable function">fun1</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 增强写法</span>
+    <span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意函数的增强写法和可计算属性是兼容的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> fun1 <span class="token operator">=</span> <span class="token string">'NekoSay'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>fun1<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;哪来的野猫呀【该用户已被禁言】&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+p<span class="token punctuation">.</span><span class="token function">NekoSay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 哪来的野猫呀【该用户已被禁言】</span>
+</code></pre></div><h3 id="对象解构"><a href="#对象解构" class="header-anchor">#</a> 对象解构</h3> <p>对象解构是用来将对象中的属性抽出变为单独变量的操作。</p> <p>这是es6中新增加的语法，下面两种写法的效果是一样的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> o <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 之前的写法</span>
+<span class="token keyword">let</span> girlName <span class="token operator">=</span> o<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+<span class="token keyword">let</span> girlAge <span class="token operator">=</span> o<span class="token punctuation">.</span>age<span class="token punctuation">;</span>
+<span class="token comment">// es6写法</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span> <span class="token operator">:</span> girlName <span class="token punctuation">,</span> <span class="token literal-property property">age</span> <span class="token operator">:</span> girlAge <span class="token punctuation">}</span> <span class="token operator">=</span> o<span class="token punctuation">;</span>
+</code></pre></div><p>如果想使用的变量名和属性名相同，可以使用简写。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token punctuation">{</span>name <span class="token punctuation">,</span> age<span class="token punctuation">}</span> <span class="token operator">=</span> o<span class="token punctuation">;</span>
+</code></pre></div><p>如果对象中没有想要结构的值，就会赋值为undefined，也可以在解构时附上默认值。</p> <p>同时如果出现对象中不存在的值，解构喙中途停止，也不会有回滚操作。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token punctuation">{</span>name <span class="token punctuation">,</span> sex <span class="token operator">=</span> <span class="token string">&quot;girl&quot;</span><span class="token punctuation">}</span> <span class="token operator">=</span> o <span class="token comment">// 因为sex不存在所以直接用默认值，没有默认值就变为undefined，后面的其他属性也会停止解构</span>
+</code></pre></div><p>被解构的值会被转化为对象，即使是数字，字符串或布尔值也可以被解构，但是null和undefined不可以。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token punctuation">{</span>length<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token string">&quot;foobar&quot;</span> <span class="token comment">// 6</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> _ <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">// TypeError</span>
+</code></pre></div><p>如果是为事先声明过的值解构，需要加上小括号。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> oName <span class="token punctuation">,</span> oAge<span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span> <span class="token operator">:</span> oName <span class="token punctuation">,</span> <span class="token literal-property property">age</span> <span class="token operator">:</span> oAge <span class="token punctuation">}</span> <span class="token operator">=</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>解构赋值可以嵌套使用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> o <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">job</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">title</span> <span class="token operator">:</span> <span class="token string">&quot;player&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> job <span class="token punctuation">{</span>title<span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> o<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span> <span class="token comment">// player</span>
+</code></pre></div><p>解构赋值也可以在函数中使用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">printPerson</span><span class="token punctuation">(</span><span class="token parameter">foo <span class="token punctuation">,</span> <span class="token punctuation">{</span>name <span class="token punctuation">,</span> age<span class="token punctuation">}</span> <span class="token punctuation">,</span>bar</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 打印接收到的所有参数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">printPerson</span><span class="token punctuation">(</span><span class="token string">&quot;111&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">}</span> <span class="token punctuation">,</span> <span class="token string">&quot;222&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// [&quot;111&quot;, {name : 'neko' , age : 16}, &quot;222&quot;]</span>
+<span class="token comment">// {name : 'neko' , age : 16}</span>
+</code></pre></div><h2 id="创建对象"><a href="#创建对象" class="header-anchor">#</a> 创建对象</h2> <p>在es6引入类之后对于对象创建的优化算是结束了。但是在类之前就有许多创建对象的方案，类只不过是简化这些方案。</p> <p>下面依次介绍被替代掉的这些方案。</p> <h3 id="工厂模式"><a href="#工厂模式" class="header-anchor">#</a> 工厂模式</h3> <p>工厂函数是一种最早的设计模式，他的示例语法如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token parameter">name <span class="token punctuation">,</span> age</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    o<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    o<span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> o<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这样虽然可以模板化得创建对象，但是存在诸多问题，比如没有对象标识符（也就是对象的类型）</p> <h3 id="构造函数模式"><a href="#构造函数模式" class="header-anchor">#</a> 构造函数模式</h3> <p>js中提供了一些原生的构造函数，例如<strong>Object()</strong> 和 <strong>Array()</strong>，我们也可以自定义构造函数。</p> <p>下面是构造函数的语法示例：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name <span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'amiya'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>按照惯例，我们将构造函数的首字母大写来和普通函数做区分。</p> <p>在创建实例时，需要使用new关键字来创建，要注意构造函数也是个函数，他和普通函数的区别只是调用方式的不同，它通过new关键字来调用。</p> <p>构造函数也可以当作普通法函数来调用，这样就会在window对象上挂在相应的属性和方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">Person</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// neko</span>
+</code></pre></div><p>在使用new操作符的时候，浏览器做了以下工作：</p> <blockquote><ol><li>在内存中创建一个新对象</li> <li>将对象的[[prototype]]特性赋值为构造函数的prototype。</li> <li>构造函数内部的this被修改为新创建的对象。</li> <li>执行构造函数内的代码。</li> <li>如果构造函数内有返回值，则接受，否则返回新创建的对象。</li></ol></blockquote> <p>上面创建的p1和p2中保存有不用的实例，但他们的constructor属性都指向Person构造函数。</p> <p>也可以使用instanceof操作符来获取对应的构造函数，也就是对象类型。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>p1<span class="token punctuation">.</span>constructor <span class="token operator">===</span> p2<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Person  <span class="token comment">// true</span>
+p1 <span class="token keyword">instanceof</span> <span class="token class-name">Person</span>  <span class="token comment">// true</span>
+p1 <span class="token keyword">instanceof</span> <span class="token class-name">Object</span>  <span class="token comment">// true</span>
+</code></pre></div><p><em>构造函数同样存在很多问题：构造函数的每一个实例都是独立的，有一些重复的属性和方法，也都会生成两份，造成内存浪费。</em></p> <h3 id="原型模式"><a href="#原型模式" class="header-anchor">#</a> 原型模式</h3> <p>要理解原型模式，需要先理解原型。</p> <h4 id="理解原型"><a href="#理解原型" class="header-anchor">#</a> 理解原型</h4> <p>要理解原型就是是理解原型对象，构造函数和实例对象的关系。</p> <p>原型之间的关系比较复杂，简单画一张图理解一下。</p> <p><img src="https://img-blog.csdnimg.cn/24710790ffaf4f3dbeb45f74585d1a16.png" alt="在这里插入图片描述"></p> <blockquote><ul><li>类中有一个prototype属性指向原型对象。</li> <li>原型对象中有一个constructor属性指向类。</li> <li>实例对象中的prototype也指向原型对象，但这个属性被封装，只能通过__proto__属性来指向原型。</li> <li>在创建类时会创建出一个原型对象，实例对象共有的属性和方法会储存在原型对象中。</li></ul></blockquote> <p>ES6中提供了 <strong>Object.getPrototypeof()</strong> 方法返回实例对象内部的 <strong>[[prototype]]</strong> 属性的值，使用这个方法可以取得一个实例对象的原型。</p> <p>ES6中还提供了 <strong>Object.setPrototypeof()</strong> 方法，可以向实例对象内部的 <strong>[[prototype]]</strong> 写入值修改其对应的实例对象，但这个方法严重影响性能，不建议使用。要实现其对应的功能，可以通过 <strong>Object.create()</strong> 方法创建对象，并为其指定原型。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">16</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 模拟一个原型对象</span>
+
+<span class="token keyword">let</span> b <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 创建新对象b，将a指定为原型</span>
+</code></pre></div><h4 id="原型层级"><a href="#原型层级" class="header-anchor">#</a> 原型层级</h4> <p>在通过对象访问属性时，会通过属性名进行查找，如果在实例对象上找不到对应的属性名，则会查找原型对象。</p> <p>实例对象上的属性会覆盖掉原型对象上的同名属性。</p> <p>通过调用<strong>hasOwnProperty()</strong> 方法可以确定某个属性，是来自实例对象，还是来自原型对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'neko'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+
+p1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 来自原型，返回false</span>
+p1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 来自实例，返回true</span>
+</code></pre></div><h4 id="重写原型对象"><a href="#重写原型对象" class="header-anchor">#</a> 重写原型对象</h4> <p>如果原型模式中包括多个对象，重复的出现propotype显得冗余，可以采用下面的方法进行重写。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">16</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样做会导致新的原型的constructor属性指向Object而不是Person，
+可以在重写时指定constructor属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">constrcutor</span><span class="token operator">:</span> Person<span class="token punctuation">,</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">16</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样做依然有问题，原生的constructor属性时不可枚举的，因此应当使用 <strong>Object.defineProperty()</strong> 方法来定义constructor属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">16</span>
+<span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token punctuation">,</span> <span class="token string">&quot;constructor&quot;</span> <span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">enumrable</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">value</span> <span class="token operator">:</span> Person
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>重写之后的原型将不能再影响重写前创建的对象。
+之前的对象依然指向重写前的原型。</p> <blockquote><p>在对象创建之后修改原型，实例对象的值也会随之变化。</p></blockquote> <h4 id="原生对象模型"><a href="#原生对象模型" class="header-anchor">#</a> 原生对象模型</h4> <p>通过prototype可以向String，Array等原生的原型对象中添加方法，但不推荐这样做，可能引发很多问题。</p> <p>推荐的做法是，创建自定义的类继承原生的原型对象。</p> <h4 id="原型的问题"><a href="#原型的问题" class="header-anchor">#</a> 原型的问题</h4> <ol><li>弱化了传递初始化参数的能力，使得所有的对象初始值都一样。</li> <li>原型对象中的引用数据类型会公用，可能出现问题。</li></ol> <h3 id="对象迭代"><a href="#对象迭代" class="header-anchor">#</a> 对象迭代</h3> <h4 id="for-in"><a href="#for-in" class="header-anchor">#</a> for-in</h4> <ul><li><strong>for-in</strong> 循环可以获得对象中所有的可枚举的属性（包括被封装的属性）</li> <li><strong>Object.keys()</strong> 方法可以实现类似的效果，不过他只能放回实例对象上的属性，不包含原型对象上的属性。</li> <li><strong>Object.getOwnPropertyNames</strong> 可以获得实例对象上所有属性，无论其是否可以枚举</li> <li><strong>Object.getOwnProtertySymbols()</strong> 方法可以获得对象上所有的以符号定义的属性名。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'neko'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> s1 <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'s1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> o <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>s1<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token string">'s1'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">s2</span> <span class="token operator">:</span> <span class="token string">'s2'</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 'age' ]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 'age' ]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 'constructor', 'name' ]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertySymbols</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ Symbol(s1) ]</span>
+</code></pre></div><p>对于以上的枚举方法，枚举顺序有所差异。</p> <ul><li><strong>for-in</strong> 和 <strong>Object.keys()</strong> 枚举顺序不确定，因浏览器而异。</li> <li><strong>Object.getOwnPropertyNames</strong> 和 <strong>Object.getOwnProtertySymbols()</strong> 的枚举顺序遵守下面的规则：
+<ol><li>先升序枚举数值键</li> <li>以插入顺序枚举字符串和符号键</li></ol></li></ul> <h4 id="迭代方法"><a href="#迭代方法" class="header-anchor">#</a> 迭代方法</h4> <p>ES6中新增两个静态方法用于<strong>对象迭代</strong>（取得对象中各属性的值）</p> <ul><li><strong>Object.values()</strong></li> <li><strong>OBject.entries()</strong></li></ul> <p>这两个方法在进行对象迭代时，会忽略符号键。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> girl <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">'neko'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'k1'</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token string">'k1'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>girl<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 'neko', 16 ]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>girl<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ [ 'name', 'neko' ], [ 'age', 16 ] ]</span>
+</code></pre></div><h2 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h2> <blockquote><p>==(这里有很多东西我看不懂，就没有写出来，暂时先这样)==</p></blockquote> <p>js通过原型链实现了继承。
+如果一个原型对象是另一个原型对象的实例就构成了原型链。
+<img src="https://img-blog.csdnimg.cn/6c573bd92cf844678ef002949fae5624.png" alt="在这里插入图片描述">
+当son实例需要一个属性时，会现在自身检索。
+如果找不到则通过__proto__向Son原型寻找。
+如果还找不到，则再通过__proto__向Father原型寻找。</p> <p>Son原型是Father原型的实例对象，重点在于Son类没有使用默认原型，而是将原型替换为了Father类的实例对象，这样做实现了继承，实例对于属性的搜索会一直持续到原型链末端。</p> <h3 id="默认原型"><a href="#默认原型" class="header-anchor">#</a> 默认原型</h3> <p>默认情况下所有的引用类型原型链末端都是Object原型对象，</p> <h3 id="原型与继承"><a href="#原型与继承" class="header-anchor">#</a> 原型与继承</h3> <p>确定一个实例与原型的关系有两种方法</p> <ul><li><strong>instanceof</strong>操作符</li> <li><strong>isPrototypeOf()</strong> 原型方法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'aaa'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 只要在原型链中出现过就返回true</span>
+str <span class="token keyword">instanceof</span> <span class="token class-name">String</span> <span class="token comment">// true</span>
+str <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 只要在原型链中出现过就返回true</span>
+<span class="token class-name">String</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="原型链的问题"><a href="#原型链的问题" class="header-anchor">#</a> 原型链的问题</h3> <p>原型链存在的问题有两个：</p> <ul><li>首先依然是引用数据类型的问题。</li> <li>子类在实例化时，无法影响父类的构造函数。</li></ul> <h2 id="类"><a href="#类" class="header-anchor">#</a> 类</h2> <blockquote><p>前面使用各种方法来模拟类的行为。
+es6正式引入了类，但其背后依然是使用前面的方法，本质上只是一个语法糖。
+前面的作为了解，因为有了类以后不再需要那些东西，但那些东西能帮我们理解类的原理。</p></blockquote> <h3 id="类的定义"><a href="#类的定义" class="header-anchor">#</a> 类的定义</h3> <p>按照下面的语法来定义类</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意：</p> <ul><li>类不能被提升，在实例化之前不能引用。</li> <li>类可以由构造函数、实例方法、获取函数、设置函数、静态方法组成，但这些都不是必须的，可以定义空类。</li></ul> <h3 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h3> <p><strong>constructor</strong>关键字用于在类中定义构造函数。
+在使用new关键字创建实例时会调用这个函数，默认会自动创建一个空的构造函数。</p> <p>在使用new实例化类时，可以传入参数，这些参数会传入构造器函数中来初始化对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Girl</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// {name:'neko' , age:16}</span>
+</code></pre></div><p>构造器函数就是一个特殊的函数，实例化之后也会变为普通函数，只不过在调用时依然需要使用new关键字。</p> <p>类也是一个特殊的函数，之前的原型链之间的关系在类这里依然适用。</p> <h3 id="实例、原型和类"><a href="#实例、原型和类" class="header-anchor">#</a> 实例、原型和类</h3> <p>通过构造器创建出的实例中的成员都是独立的，不会共享。</p> <p>为了在实例之间共享方法，可以在类中定义方法，这些方法会被附加在原型上。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// 这些都是独立的</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// 这个方法会出现在原型上。</span>
+	<span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token comment">// 特别注意不能再类中添加属性。</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Girl</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// {name:'neko' , age:16}</span>
+</code></pre></div><p>类也支持获取get和set函数，语法跟普通对象一样。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token keyword">set</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name_ <span class="token operator">=</span> newVal<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">get</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name_<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Girl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>类可以定义静态方法，使用<strong>static</strong>关键字，静态方法只能由类本身来调用，一个类只能由一个静态方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token keyword">static</span> <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Girl<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>虽然类在定义是不允许添加属性和方法，但可以在外部进行添加。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+Girl<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span> <span class="token comment">// 在类上添加</span>
+<span class="token class-name">Girl</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span> <span class="token comment">// 在原型对象上添加</span>
+</code></pre></div><h3 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h3> <p>使用extends关键字进行继承操作，不仅可以继承类，还可以继承构造函数。</p> <h4 id="super"><a href="#super" class="header-anchor">#</a> super</h4> <p>子类可以在构造函数和静态方法中使用super，super必须写在第一行。</p> <p>在构造函数中使用super会调用父类的构造函数。
+在静态方法中使用super会调用父类的静态方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">static</span> <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token keyword">extends</span> <span class="token class-name">Girl</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">static</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GirlFriend</span><span class="token punctuation">(</span><span class="token string">'neko'</span> <span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// {name:'neko' , age:16}</span>
+</code></pre></div><h4 id="抽象基类"><a href="#抽象基类" class="header-anchor">#</a> 抽象基类</h4> <p>有时候会需要一个不会被实例化，但需要被继承的类，这种类称为抽象基类。
+js没有提供相应的语法，但可以通过 <strong>new.target</strong> 实现。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Base</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">.</span>target <span class="token operator">===</span> Base<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;不能创建抽象基类&quot;</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在抽象基类中可以进行检查，要求子类必须包含某些方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Base</span> <span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">.</span>target <span class="token operator">===</span> Base<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;不能创建抽象基类&quot;</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>foo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;子类中必须有自己的foo方法&quot;</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="继承内置类型"><a href="#继承内置类型" class="header-anchor">#</a> 继承内置类型</h4> <p>继承js内置的类可以便捷的扩展功能</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">MyArray</span> <span class="token keyword">extends</span> <span class="token class-name">Array</span> <span class="token punctuation">{</span>
+	<span class="token function">myfun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>有些内置的方法会放回新的实例，默认会通过调用者的类来创建新的实例。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> a1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyArray</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> a2 <span class="token operator">=</span> a1<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 返回值为MyArray类型</span>
+</code></pre></div><p>通过覆盖Symbol.species访问器可以修改这一行为</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">MyArray</span> <span class="token keyword">extends</span> <span class="token class-name">Array</span> <span class="token punctuation">{</span>
+	<span class="token keyword">static</span> <span class="token keyword">get</span> <span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>species<span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> Array<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <!----> <!----></div> <div class="page-catalog" data-v-b36df3b8 data-v-05fb5372><div class="menu" data-v-b36df3b8><div class="menu-item cur" data-v-b36df3b8>目录</div> <div class="menu-item" data-v-b36df3b8>首页</div> <div class="menu-item" data-v-b36df3b8><a href="#top" data-v-b36df3b8> 顶部</a></div></div> <div class="catalog" data-v-b36df3b8><!----> <h1 class="curtitle" data-v-b36df3b8></h1> <a href="#理解对象" nofollow class="level2" data-v-b36df3b8>理解对象</a><a href="#属性的类型" nofollow class="level3" data-v-b36df3b8>属性的类型</a><a href="#静态方法" nofollow class="level3" data-v-b36df3b8>静态方法</a><a href="#对象的增强写法" nofollow class="level3" data-v-b36df3b8>对象的增强写法</a><a href="#对象解构" nofollow class="level3" data-v-b36df3b8>对象解构</a><a href="#创建对象" nofollow class="level2" data-v-b36df3b8>创建对象</a><a href="#工厂模式" nofollow class="level3" data-v-b36df3b8>工厂模式</a><a href="#构造函数模式" nofollow class="level3" data-v-b36df3b8>构造函数模式</a><a href="#原型模式" nofollow class="level3" data-v-b36df3b8>原型模式</a><a href="#对象迭代" nofollow class="level3" data-v-b36df3b8>对象迭代</a><a href="#原型链" nofollow class="level2" data-v-b36df3b8>原型链</a><a href="#默认原型" nofollow class="level3" data-v-b36df3b8>默认原型</a><a href="#原型与继承" nofollow class="level3" data-v-b36df3b8>原型与继承</a><a href="#原型链的问题" nofollow class="level3" data-v-b36df3b8>原型链的问题</a><a href="#类" nofollow class="level2" data-v-b36df3b8>类</a><a href="#类的定义" nofollow class="level3" data-v-b36df3b8>类的定义</a><a href="#构造函数" nofollow class="level3" data-v-b36df3b8>构造函数</a><a href="#实例、原型和类" nofollow class="level3" data-v-b36df3b8>实例、原型和类</a><a href="#继承" nofollow class="level3" data-v-b36df3b8>继承</a> <!----></div></div> <div id="gitalk-container" data-v-09701175 data-v-05fb5372></div></div> <div id="landlord" class="live2d-box" data-v-46533029 data-v-937f91ec><div id="live2deMessage" class="message show" data-v-46533029>喵喵喵～</div> <!----></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.20d6ccea.js" defer></script><script src="/assets/js/4.bfe2a335.js" defer></script><script src="/assets/js/1.ed280157.js" defer></script><script src="/assets/js/29.81fe5872.js" defer></script>
+  </body>
+</html>

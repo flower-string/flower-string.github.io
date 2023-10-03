@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{492:function(n,t,e){"use strict";e.r(t);var l=e(1).a.extend({name:"book",props:{content:{type:String,default:"hello"}}}),o=e(2),s=Object(o.a)(l,(function(){var n=this._self._c;this._self._setupProxy;return n("div",[n("ClientOnly",[this._v("\n    这里是一本书\n  ")])],1)}),[],!1,null,null,null);t.default=s.exports}}]);
